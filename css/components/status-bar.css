@@ -1,0 +1,39 @@
+.status-bar {
+  position: fixed;
+  width: 100%;
+  padding: 5px 3px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  /* 내용물의 위치. 지금상태에서 모든 내용물을 가운데에 배치 */
+}
+
+.status-bar__column {
+  width: 33.3%;
+  /* 한 라인에 3개의 박스 3등분함. */
+}
+
+.status-bar__column:first-child span {
+  margin-right: 3px;
+  /* 와이파이 icon과 떨어지게 함 */
+}
+
+.status-bar__column:nth-child(2) {
+  /* 두번째 박스안에 있는 content의 위치가 앞(왼)쪽에 와있음. 이것을 가운데로 오게 해야함. */
+  display: flex;
+  justify-content: center;
+}
+
+.status-bar__column:last-child {
+  /* 세번째 박스안에 있는 content의 위치가 앞쪽에 와있음. 맨왼쪽으로 가게 해야함. */
+  display: flex;
+  justify-content: flex-end;
+  /* 세번째 박스안에 있는 content들의 세로위치가 다 다름. 모두 가운데로 오게 해야함. */
+  align-items: center;
+}
+
+.status-bar__column .fa-battery-full {
+  margin: 0 7px;
+  /* margin : 위아래 오왼 */
+  /* 배터리랑 번개가 너무 붙어서 띄움 */
+}

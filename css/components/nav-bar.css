@@ -1,0 +1,77 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 17px 0;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__link {
+  color: #2e363e;
+  position: relative;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(180deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification {
+  position: absolute;
+  left: 16px;
+  bottom: 15px;
+  z-index: 0;
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+
+.nav__dot {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  display: flex;
+  position: absolute;
+  right: -5px;
+  top: -12px;
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.nav__btn {
+  transform: translateY(50px);
+  /* 아예 모든 버튼의 시작을 아래쪽 50에 두고 나중에 나오는 애니메이션은 다 여기서 시작되는 것임.
+  만약 여기말고 keyframes에 tranform을 적는다면, 그 뜻은 애니메이션이 작동할때 내려가는 것이기 때문에 다름.*/
+  animation: appearBtnAnimation 0.3s ease-in-out forwards;
+  opacity: 0;
+}
+.nav__btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav__btn:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.nav__btn:last-child {
+  animation-delay: 0.6s;
+}
