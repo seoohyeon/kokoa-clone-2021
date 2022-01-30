@@ -1,5 +1,5 @@
 .alt-header {
-  position: fixed;
+  position: sticky;
   top: 25px;
   left: 0;
   right: 0;
