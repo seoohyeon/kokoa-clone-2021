@@ -7,10 +7,6 @@
   justify-content: space-between;
 }
 
-.settings__setting:first-child {
-  padding-top: 30px;
-}
-
 .settings__setting i {
   margin-right: 50px;
   font-size: 22px;
